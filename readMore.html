@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Read More Example</title>
+        <script>
+            document.addEventListener("DOMContentLoaded", function(){
+                var button = document.getElementById("Btn");
+                var hiddenC = document.getElementById("hiddenParagraph");
+                button.addEventListener("click",readMore);
+                function readMore(){
+                    if (hiddenC.style.display ==="none"){
+                        hiddenC.style.display ="block",
+                        button.innerText = "Read Less";
+
+                    }else{
+                        moreText.style.display = "none";
+                        button.innerHTML = "Read More";
+                    }
+                    
+
+                }window.ToggleReadMore = ToggleReadMore; //Expose the function to the global scope
+
+            });
+            </script>
+    </head>
+    <body>
+        <h1>Read More Example</h1>
+        <p>This is the first abstract conten</p>
+        <p style = "display:none;">This is the second content</p>
+        <button id = "Btn">Read More</button>
+    </body>
+</html>
